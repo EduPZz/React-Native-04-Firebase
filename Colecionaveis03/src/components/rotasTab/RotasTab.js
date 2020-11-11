@@ -18,7 +18,7 @@ const RotasTab = () => {
     <Tab.Navigator
       tabBarOptions={
         {
-          style: {backgroundColor: '#081a31', borderTopColor: '#081a31'},
+          style: {backgroundColor: '#FF00CC', borderTopColor: '#FF00CC'},
           activeTintColor: '#FFFFFF',
           showLabel: false,
         }
@@ -45,7 +45,7 @@ const RotasTab = () => {
           unmountOnBlur: true,
         }}
       />      
-      <Tab.Screen name="Item" component={Item} />
+      <Tab.Screen name="Item" component={Item} initialParams={{item: {}, operacao: 'adicionar'}}/>
     </Tab.Navigator>
   );
 }

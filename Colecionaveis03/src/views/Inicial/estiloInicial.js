@@ -9,7 +9,7 @@ const estiloInicial = StyleSheet.create({
    header: {
       height: 50,
       width: '100%',
-      backgroundColor: '#081a31',
+      backgroundColor: '#FF00CC',
       flexDirection: 'row',
       alignItems: 'flex-end',    
    },

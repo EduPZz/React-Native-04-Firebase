@@ -1,21 +1,18 @@
 import React, { useState } from 'react';
-import { Text, View, Image } from 'react-native';
+import { Text, Image, TouchableOpacity } from 'react-native';
 import estiloItemLista from './estiloItemLista';
 import { LinearGradient } from 'expo-linear-gradient';
 
-const ItemLista = ({data}) => {
+const ItemLista = ({data, detalhe}) => {
 
     const [item, setItem] = useState(data);
 
     return (
-        <View style={estiloItemLista.areaItens}>
+        <TouchableOpacity style={estiloItemLista.areaItens} onPress={detalhe}>
 
-            <LinearGradient colors={['#14417b', '#92afd7', '#92afd7']}>
+            <LinearGradient colors={['#C1BBF5', '#D5D1F8', '#D5D1F8', '#C1BBF5']}>
                 <Text style={estiloItemLista.itemTitulo}> {item.titulo} </Text>
-            </LinearGradient>
-            <Text style={estiloItemLista.itemSubTitulo}> {item.autor} ({item.anoPublicacao}) </Text>
-            
-            <LinearGradient colors={['#92afd7', '#92afd7', '#14417b']}>
+                <Text style={estiloItemLista.itemSubTitulo}> {item.autor} ({item.anoPublicacao}) </Text>
                 <Image 
                     resizeMode='contain'
                     style={estiloItemLista.itemFoto}
@@ -23,7 +20,7 @@ const ItemLista = ({data}) => {
                 />
             </LinearGradient>
 
-        </View>
+        </TouchableOpacity>
     );
 }
 

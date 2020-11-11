@@ -6,7 +6,7 @@ const estiloColecao = StyleSheet.create({
    },
    header: {
       height: 50,
-      backgroundColor: '#14417b',
+      backgroundColor: '#FF00CC',
       flexDirection: 'row',
       alignItems: 'center',
       justifyContent: 'space-between',
